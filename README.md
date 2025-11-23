@@ -20,3 +20,6 @@ Here are some ideas to get you started:
   <source media="(prefers-color-scheme: light)" srcset="https://raw.githubusercontent.com/Bobchenyx/Bobchenyx/output/github-snake.svg">
   <img alt="github contribution grid snake animation" src="https://raw.githubusercontent.com/Bobchenyx/Bobchenyx/output/github-snake.svg">
 </picture>
+
+
+![Bobchenyx's GitHub stats](https://github-readme-stats.vercel.app/api?username=Bobchenyx&show_icons=true&bg_color=00000000)
