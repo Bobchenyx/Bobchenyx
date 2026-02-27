@@ -22,4 +22,3 @@ Here are some ideas to get you started:
 </picture>
 
 
-![Bobchenyx's GitHub stats](https://github-readme-stats.vercel.app/api?username=Bobchenyx&show_icons=true&bg_color=00000000)
