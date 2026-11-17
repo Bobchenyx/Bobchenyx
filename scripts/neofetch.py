@@ -130,8 +130,8 @@ def line_svg(x, y, segs):
 
 def render(theme, ascii_lines, lines, updated):
     c = THEMES[theme]
-    pad = 24
-    bar_h = 30
+    pad = 8
+    bar_h = 0
     art_cols = max(len(l) for l in ascii_lines)
     art_w = art_cols * ART_CW
     art_h = len(ascii_lines) * ART_LH
@@ -140,20 +140,12 @@ def render(theme, ascii_lines, lines, updated):
     x_info = pad + art_w + 40
     width = int(x_info + RIGHT_COLS * CH * 1.03 + pad)
     body_h = max(art_h, info_h)
-    height = int(bar_h + pad + body_h + pad + 10)
+    height = int(bar_h + pad + body_h + pad)
     art_top = bar_h + pad + (body_h - art_h) / 2
     y0 = bar_h + pad + (body_h - info_h) / 2 + FONT
 
     out = [f'<svg xmlns="http://www.w3.org/2000/svg" width="{width}" height="{height}" '
-           f'viewBox="0 0 {width} {height}" font-family="{MONO}" font-size="{FONT}px">',
-           f'<rect x="0.5" y="0.5" width="{width-1}" height="{height-1}" rx="10" '
-           f'fill="{c["bg"]}" stroke="{c["border"]}"/>',
-           f'<path d="M0.5 {bar_h} V10.5 a10 10 0 0 1 10 -10 H{width-10.5} a10 10 0 0 1 10 10 V{bar_h} Z" '
-           f'fill="{c["bar"]}" stroke="{c["border"]}"/>']
-    for i, col in enumerate(["#ff5f57", "#febc2e", "#28c840"]):
-        out.append(f'<circle cx="{18 + i * 20}" cy="15.5" r="6" fill="{col}"/>')
-    out.append(f'<text x="{width/2}" y="20" text-anchor="middle" fill="{c["note"]}" '
-               f'font-size="12px">bobchenyx@github: ~ $ neofetch</text>')
+           f'viewBox="0 0 {width} {height}" font-family="{MONO}" font-size="{FONT}px">']
 
     # Draw the braille portrait as real dots so it looks the same in every browser/font.
     dots = []
@@ -188,8 +180,6 @@ def render(theme, ascii_lines, lines, updated):
         else:
             continue
         out.append(line_svg(x_info, y, segs))
-    out.append(f'<text x="{width - pad}" y="{height - 14}" text-anchor="end" fill="{c["note"]}" '
-               f'font-size="11px">updated {updated}</text>')
     out.append('</svg>')
     return "\n".join(out) + "\n"
 
