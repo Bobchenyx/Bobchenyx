@@ -1,0 +1,58 @@
+{
+  "username": "Bobchenyx",
+  "title": "yixiao@chen",
+  "fields": [
+    [
+      "OS",
+      "macOS, Ubuntu Linux"
+    ],
+    [
+      "Uptime",
+      "{github_age} on GitHub"
+    ],
+    [
+      "Host",
+      "Motional"
+    ],
+    [
+      "Kernel",
+      "Perception Engineer"
+    ],
+    [
+      "IDE",
+      "VS Code, Claude Code"
+    ],
+    [
+      ""
+    ],
+    [
+      "Languages.Programming",
+      "{top_languages}"
+    ],
+    [
+      "Languages.Real",
+      "Chinese, English"
+    ],
+    [
+      ""
+    ],
+    [
+      "Education",
+      "M.S. ECE @ Northeastern University"
+    ],
+    [
+      "Interests",
+      "Autonomous Driving, Robotics, LLM Systems"
+    ]
+  ],
+  "contact": [
+    [
+      "Website",
+      "bobchenyx.github.io"
+    ],
+    [
+      "GitHub",
+      "github.com/Bobchenyx"
+    ]
+  ]
+}
